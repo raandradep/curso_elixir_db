@@ -16,16 +16,13 @@ config :curso_elixir_db, CursoElixirDbWeb.Endpoint,
   secret_key_base: "oVqd0t7YsKpOEpKXSazhumDOY4ij3El/xhpgzBua2fwJmIHIeoBAfqwh7oC9WYT5",
   render_errors: [view: CursoElixirDbWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: CursoElixirDb.PubSub,
-  live_view: [signing_salt: "TikIGOVd"]
+  live_view: [signing_salt: "e4BpDUJFE6sifyPYG+M+dJOrgXHstM45"]
 
-
-
-
-  config :curso_elixir_db, Cron.Schedule,
+config :curso_elixir_db, Cron.Schedule,
   jobs: [
-    # cada segundo
-    #{{:extended, "* * * * *"},      {Tarea.Mensaje, :send, []}},
-
+    #   # cada segundo
+    #   #{{:extended, "* * * * *"},      {Tarea.Mensaje, :send, []}},
+    # {{:extended, "*/20 * * * *"}, {CursoElixirDb.ExplodingTopics.Manage, :add_topic, []}}
   ]
 
 # Configures Elixir's Logger

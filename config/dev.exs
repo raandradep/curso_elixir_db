@@ -16,7 +16,7 @@ config :curso_elixir_db, CursoElixirDb.Repo,
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
 config :curso_elixir_db, CursoElixirDbWeb.Endpoint,
-  http: [port: 4000],
+  http: [port: 8082],
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
@@ -30,13 +30,12 @@ config :curso_elixir_db, CursoElixirDbWeb.Endpoint,
     ]
   ]
 
-  config :logger, level: :debug
+config :logger, level: :debug
 
-  config :curso_elixir_db, Cron.Programacion,
+config :curso_elixir_db, Cron.Programacion,
   jobs: [
     # cada segundo
-    {{:extended, "* * * * *"},      {Tarea.Mensaje, :send, ["Hola",1]}},
-
+    # {{:extended, "* * * * *"},      {Tarea.Mensaje, :send, ["Hola",1]}},
   ]
 
 # ## SSL Support

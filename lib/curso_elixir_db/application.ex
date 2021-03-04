@@ -17,13 +17,15 @@ defmodule CursoElixirDb.Application do
       CursoElixirDbWeb.Endpoint,
       # Start a worker by calling: CursoElixirDb.Worker.start_link(arg)
       # {CursoElixirDb.Worker, arg}
-      Cron.Schedule
+      Cron.Schedule,
+      {CursoElixirDb.Registry, name: CursoElixirDb.Registry}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
     opts = [strategy: :one_for_one, name: CursoElixirDb.Supervisor]
     Supervisor.start_link(children, opts)
+    # Supervisor.start_link([CursoElixirDb.Registry], opts)
   end
 
   # Tell Phoenix to update the endpoint configuration

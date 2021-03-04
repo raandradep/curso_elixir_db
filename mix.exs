@@ -24,6 +24,15 @@ defmodule CursoElixirDb.MixProject do
     ]
   end
 
+  # def application do
+  #   [ mod: {CursoElixirDb.Application, []},
+  #     extra_applications: applications(Mix.env)
+  #   ]
+  # end
+
+  # defp applications(:test), do: [:logger, :runtime_tools, :postgrex]
+  # defp applications(_), do: [:logger, :runtime_tools]
+
   # Specifies which paths to compile per environment.
   defp elixirc_paths(:test), do: ["lib", "test/support"]
   defp elixirc_paths(_), do: ["lib"]
@@ -35,6 +44,7 @@ defmodule CursoElixirDb.MixProject do
     [
       {:phoenix, "~> 1.5.7"},
       {:phoenix_ecto, "~> 4.1"},
+      {:phoenix_live_view, "~> 0.15.4"},
       {:ecto_sql, "~> 3.4"},
       {:postgrex, ">= 0.0.0"},
       {:phoenix_html, "~> 2.11"},
@@ -45,8 +55,12 @@ defmodule CursoElixirDb.MixProject do
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
-      {:quantum, "~> 3.0"}
-
+      {:quantum, "~> 3.0"},
+      {:httpoison, "~> 1.8"},
+      {:poison, "~> 2.0"},
+      {:floki, "~> 0.30.0"},
+      {:cowboy, "~> 2.6"},
+      {:plug, "~> 1.7"}
     ]
   end
 

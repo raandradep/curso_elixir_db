@@ -10,5 +10,4 @@ defmodule CursoElixirDb.Repo.Migrations.CrearUnaTabla do
       timestamps()
     end
   end
-
 end

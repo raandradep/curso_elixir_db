@@ -23,6 +23,7 @@ defmodule CursoElixirDbWeb do
 
       import Plug.Conn
       import CursoElixirDbWeb.Gettext
+      import Phoenix.LiveView.Controller
       alias CursoElixirDbWeb.Router.Helpers, as: Routes
     end
   end
@@ -34,6 +35,8 @@ defmodule CursoElixirDbWeb do
         namespace: CursoElixirDbWeb
 
       # Import convenience functions from controllers
+      import Phoenix.LiveView.Helpers
+
       import Phoenix.Controller,
         only: [get_flash: 1, get_flash: 2, view_module: 1, view_template: 1]
 
@@ -48,6 +51,7 @@ defmodule CursoElixirDbWeb do
 
       import Plug.Conn
       import Phoenix.Controller
+      import Phoenix.LiveView.Router
     end
   end
 
