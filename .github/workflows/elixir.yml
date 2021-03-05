@@ -47,5 +47,5 @@ publish:
       with:
         name: randrade/curso_elixir_db:${{ github.sha }}
         username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
-               
+        password: ${{ secrets.DOCKER_PASSWORD }}              
+
