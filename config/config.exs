@@ -22,7 +22,7 @@ config :curso_elixir_db, Cron.Schedule,
   jobs: [
     #   # cada segundo
     #   #{{:extended, "* * * * *"},      {Tarea.Mensaje, :send, []}},
-     {{:extended, "*/40 * * * *"}, {CursoElixirDb.ExplodingTopics.Manage, :add_topic, []}}
+    {{:extended, "*/40 * * * *"}, {CursoElixirDb.ExplodingTopics.Manage, :add_topic, []}}
   ]
 
 # Configures Elixir's Logger
