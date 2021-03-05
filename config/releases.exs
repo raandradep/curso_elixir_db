@@ -2,7 +2,7 @@
 # from environment variables. You can also hardcode secrets,
 # although such is generally not recommended and you have to
 # remember to add this file to your .gitignore.
-use Mix.Config
+import Config
 
 database_url =
   System.get_env("DATABASE_URL") ||
@@ -24,6 +24,7 @@ secret_key_base =
     """
 
 config :curso_elixir_db, CursoElixirDbWeb.Endpoint,
+ server: true,
   http: [
     port: String.to_integer(System.get_env("PORT") || "4000"),
     transport_options: [socket_opts: [:inet6]]
@@ -35,7 +36,7 @@ config :curso_elixir_db, CursoElixirDbWeb.Endpoint,
 # If you are doing OTP releases, you need to instruct Phoenix
 # to start each relevant endpoint:
 #
-#     config :curso_elixir_db, CursoElixirDbWeb.Endpoint, server: true
+#   config :curso_elixir_db, CursoElixirDbWeb.Endpoint, server: true
 #
 # Then you can assemble a release by calling `mix release`.
 # See `mix help release` for more information.
