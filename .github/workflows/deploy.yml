@@ -43,7 +43,7 @@ publish:
     steps:
     - uses: actions/checkout@v2
     - name: Publish to DockerHub
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: elgohr/Publish-Docker-Github-Action@main
       with:
         name: randradepersonalsoft/curso_elixir_db:${{ github.sha }}
         username: ${{ secrets.DOCKER_USERNAME }}
