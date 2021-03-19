@@ -1,0 +1,11 @@
+# File curso_elixir_db/docker-compose.yml
+version: "3.5"
+
+services:
+  app:
+    image: randradepersonalsoft/curso_elixir_db:0.1.0
+    ports:
+      - "4000:4000"
+    env_file:
+      - config/docker.env
+   
